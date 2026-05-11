@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.main {
+  /* min-height: 100vh; */
+  width: 100%;
+  background-color: #020a0e;
+  color: white;
+  font-family: "Syne", sans-serif;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  justify-content: space-between;
+}
+
+.nav button {
+  padding: 10px;
+  border: 2px solid cyan;
+  background-color: transparent;
+  color: rgb(219, 219, 219);
+  border-radius: 20px;
+  font-size: 15px;
+}
+
+.centerNav {
+  display: flex;
+  gap: 25px;
+}
+
+.centerNav p{
+    font-size: 20px;
+    color: rgb(195, 194, 194)
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.left {
+  width: 30%;
+  padding: 20px;
+}
+
+.left h2 {
+  font-size: 25px;
+  font-weight: 200;
+  margin-bottom: 2px;
+  color: cyan;
+}
+
+.left h3 {
+  font-size: 30px;
+  font-weight: 200;
+  margin-bottom: 15px;
+  color: rgb(163, 162, 162);
+}
+
+.left h1 {
+  font-size: 90px;
+  line-height: 0.9;
+  margin-bottom: 10px;
+}
+
+.hunter{
+    color: cyan;
+}
+
+.left p {
+  font-size: 20px;
+  margin-bottom: 25px;
+  color: rgb(169, 169, 169);
+}
+
+.textBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.textBottom button {
+  padding: 15px;
+  color: white;
+  background: linear-gradient(to right, #00f2ea, #0a1114);
+  border-radius: 10px;
+  border: 1px solid cyan;
+  font-size: 15px;
+}
+
+.playButton i {
+  border: 1px solid cyan;
+  color: white;
+  border-radius: 50%;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  width: 25%;
+  gap: 50px;
+}
+
+.right i {
+  color: cyan;
+  border: 2px solid cyan;
+  border-radius: 40%;
+  padding: 10px;
+  margin-right: 15px;
+  font-size: 30px;
+  box-shadow: 0 0 10px 2px rgba(0, 255, 255, 0.5);
+}
+
+.right span {
+  font-size: 20px;
+}
+
+.ninjaImg {
+  position: absolute;
+  height: 600px;
+  inset: 0;
+  margin: auto;
+}
+
+.ring {
+  position: absolute;
+  height: 600px;
+  inset: 0;
+  margin: auto;
+  z-index: 0;
+}
+
+.footer {
+  display: flex;
+  padding: 20px;
+  margin: 0px 30px 30px 30px;
+  align-items: center;
+  justify-content: space-around;
+  background: rgba(10, 25, 30, 0.4);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(0, 245, 212, 0.2);
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.footCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footerContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-right: 2px solid gray;
+  margin: 3px;
+  padding: 18px;
+}
+
+.footerContent h1 {
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: cyan;
+  font-size: 50px;
+}
+
+.footerContent p {
+  font-size: 15px;
+  color: rgb(180, 179, 179);
+}
+
+.leftImg img {
+  height: 200px;
+}
+
+.rightImg img {
+  height: 200px;
+}

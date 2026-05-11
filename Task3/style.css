@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family:
+    DM Serif Display,
+    "Times New Roman",
+    Times,
+    serif;
+}
+.template {
+  min-height: 100vh;
+  background-color: #1d1c1c;
+  padding: 0.1px;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.headLogo {
+  width: 200px;
+  margin-top: -40px;
+}
+
+.heading h1 {
+  margin-top: 10px;
+  font-size: 50px;
+  color: white;
+  text-align: center;
+}
+
+.cards_container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+}
+.card {
+  width: 300px;
+  height: 400px;
+  background: linear-gradient(to bottom, #352720, #1d1c1c);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.card:hover {
+  border: 2px solid darkorange;
+  box-shadow: 0 0 15px 2px darkorange;
+}
+
+.name {
+  color: white;
+  font-size: 30px;
+  margin: 10px;
+}
+
+.description p {
+  font-size: 15px;
+  color: grey;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+hr {
+  margin: auto;
+  width: 50%;
+  filter: blur(1px);
+  background-color: darkorange;
+}
+
+.description h2 {
+  font-size: 25px;
+  color: darkorange;
+  margin: 10px;
+  text-align: center;
+}
+
+.image img {
+  height: 200px;
+  width: 100%;
+}
+.special {
+  width: 90%;
+  background: pink;
+  margin: auto;
+  padding: 20px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 70px;
+  background: linear-gradient(to bottom, #352720, #1d1c1c);
+  border-radius: 30px;
+}
+
+.special img {
+  height: 300px;
+}
+
+.specialDescription {
+  width: 500px;
+  color: rgb(255, 255, 255);
+  padding: 20px;
+}
+
+.specialDescription h2 {
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 10px;
+  color: darkorange;
+  letter-spacing: 3px;
+}
+
+.specialDescription h1 {
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+
+.speicalsubHeadding {
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-weight: 300;
+  color: rgb(150, 149, 149);
+}
+
+.specialPara {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: rgb(150, 149, 149);
+  font-weight: 100;
+}
+
+button {
+  padding: 20px;
+  border: 1px solid darkorange;
+  background-color: transparent;
+  color: white;
+  border-radius: 30px;
+  letter-spacing: 2px;
+  font-size: 15px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  color: rgb(154, 154, 154);
+  padding: 30px;
+  border-top: 3px solid darkorange;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+}
+
+.nav ul {
+  display: flex;
+  gap: 20px;
+}
+
+.nav li {
+  list-style: none;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.links i {
+  border: 1px solid darkorange;
+  border-radius: 50%;
+  padding: 5px;
+  color: darkorange;
+}
