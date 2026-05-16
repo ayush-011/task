@@ -1,0 +1,339 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.main {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "about about phone tablet icons"
+    "about about phone tablet flow"
+    "me stack laptop laptop flow"
+    "me stack laptop laptop toggle"
+    "current current current work work"
+    "current current current work work";
+  gap: 20px;
+  padding: 20px;
+  background-color: rgb(20, 20, 20);
+  color: white;
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.aboutBox {
+  background-color: bisque;
+  grid-area: about;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.12) 0%,
+    rgba(255, 255, 255, 0) 40%
+  );
+  border: 2px solid black;
+}
+
+.aboutHeading {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  color: white;
+}
+
+.imgHolder {
+  display: flex;
+  align-items: center;
+}
+
+.imgHolder img {
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.imgDes {
+  display: flex;
+  flex-direction: column;
+}
+
+.imgDes p {
+  font-size: 15px;
+}
+
+.imgDes h5 {
+  font-size: 8px;
+  color: gray;
+}
+
+.aboutPara {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+
+.aboutBox h2 {
+  font-size: 30px;
+  font-weight: 300;
+}
+
+.aboutPara p {
+  font-size: 15px;
+  color: gray;
+}
+
+.phoneBox {
+  background-color: rgb(0, 0, 0);
+  grid-area: phone;
+  border-radius: 20px;
+  border: 2px solid black;
+}
+
+.phoneBox img {
+  height: 100%;
+  border-radius: 20px;
+  position: relative;
+  margin-left: 2px;
+}
+
+.tabletBox {
+  background-color: black;
+  grid-area: tablet;
+  border: 2px solid black;
+  border-radius: 20px;
+}
+
+.tabletBox img {
+  height: 100%;
+  border-radius: 20px;
+}
+
+.iconsBox {
+  background-color: rgba(255, 255, 255, 0);
+  grid-area: icons;
+  width: 280px;
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 20px;
+}
+
+.iconContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 35px;
+  /* padding: 20px; */
+}
+
+.iconContainer i {
+  height: 50px;
+  width: 50px;
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.meBox {
+  background-color: cadetblue;
+  grid-area: me;
+  border-radius: 20px;
+  border: 2px solid black;
+}
+
+.meBox img {
+  height: 100%;
+  border-radius: 20px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.stackBox {
+  background-color: rgb(0, 0, 0);
+  grid-area: stack;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0);
+  border: 2px solid black;
+}
+
+.stackText {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+}
+
+.stackText h1 {
+  font-size: 20px;
+  color: gray;
+}
+
+.stackText p {
+  font-size: 25px;
+}
+
+.stackIcons{
+  display: flex;
+  gap: 30px;
+  padding: 5px;
+  flex-wrap: wrap;
+  line-height: 0.5;
+  align-items: center;
+  justify-content: center;
+}
+
+.stackIcons i{
+  font-size: 30px;
+  color: grey;
+}
+
+.laptopBox {
+  background-color: rgba(255, 255, 255, 0);
+  grid-area: laptop;
+  border-radius: 20px;
+  border: 2px solid black;
+}
+
+.lapImg {
+  height: 200px;
+}
+
+.lapImg img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.flowBox {
+  background-color: rgba(255, 255, 255, 0);
+  grid-area: flow;
+  border-radius: 20px;
+  display: flex;
+  justify-content: flex-start;
+  padding: 20px;
+  border: 2px solid black;
+}
+
+.flowText {
+  display: flex;
+  flex-direction: column;
+}
+
+.flowBox p {
+  margin-bottom: 10px;
+  font-family: 15px;
+  color: gray;
+}
+
+.flowBox h2 {
+  font-size: 25px;
+}
+
+.toggleBox {
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 20px;
+  grid-area: toggle;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+}
+
+.toggleContainer i {
+  font-size: 100px;
+  color: white;
+}
+
+.currentBox {
+  background-color: rgba(255, 255, 255, 0);
+  grid-area: current;
+  border-radius: 20px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid black;
+}
+
+.currentText {
+  width: 60%;
+}
+
+.currentText h2 {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.currentText p {
+  font-size: 15px;
+  color: grey;
+}
+
+.currentIconBox {
+  padding: 20px;
+}
+
+.currentIconBox i {
+  color: rgb(46, 46, 45);
+  font-size: 100px;
+}
+
+.workBox {
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 20px;
+  grid-area: work;
+  display: flex;
+  border: 2px solid black;
+}
+
+.left {
+  padding: 20px;
+  width: 70%;
+}
+
+.left p {
+  font-size: 15px;
+  color: gray;
+  margin-bottom: 15px;
+}
+
+.left h2 {
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.left h3 {
+  font-size: 15px;
+  color: grey;
+}
+
+.right {
+  position: relative;
+}
+
+.right i {
+  position: absolute;
+  margin-top: 100px;
+  margin-left: 130px;
+  font-size: 40px;
+  border: 2px solid white;
+  border-radius: 50%;
+}
