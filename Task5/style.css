@@ -1,0 +1,305 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+}
+
+.menuBtn {
+  display: none;
+  background-color: transparent;
+  font-size: 20px;
+  padding: 5px;
+  color: white;
+  border: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+main {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url("/62450711-41d3-538c-9a93-cb39bf28a4f9.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  color: white;
+}
+
+.logo {
+  font-size: 1.25rem;
+  letter-spacing: 5px;
+  font-weight: 500;
+}
+
+.anchor {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.anchor a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.anchor button {
+  padding: 0.7rem 1.2rem;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.center {
+  margin: auto;
+  text-align: center;
+  color: white;
+  padding: 1rem;
+}
+
+.center h1 {
+  font-size: clamp(3.5rem, 12vw, 7.5rem);
+  letter-spacing: 4px;
+}
+
+.center p {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.cardSection {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #f5f7f6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 1.25rem;
+}
+
+.cardSection h2 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  text-align: center;
+}
+
+.dash {
+  height: 4px;
+  width: 70px;
+  background-color: black;
+  margin-top: 1rem;
+}
+
+.cardContainer {
+  width: 100%;
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+}
+
+.card {
+  width: min(280px, 100%);
+  background-color: white;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.imgHolder {
+  width: 100%;
+  height: 220px;
+}
+
+.cardDesc {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.cardDesc h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.aboutSection {
+  height: 600px;
+  width: 100%;
+  display: flex;
+  background-color: #f5f7f6;
+}
+
+.aboutImage {
+  width: 50%;
+  height: 100%;
+}
+
+.aboutImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.aboutContent {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  padding: 0 80px;
+  text-align: center;
+}
+
+.aboutContent h2 {
+  font-size: 4rem;
+  font-weight: 500;
+}
+
+.aboutContent p {
+  line-height: 1.8;
+  font-size: 1.1rem;
+  max-width: 700px;
+}
+
+.aboutContent p {
+  max-width: 500px;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+.subscribeSection {
+  min-height: 50vh;
+  width: 100%;
+  background-color: #e9ece7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.subscribeSection h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.subscribeSection p {
+  font-size: 1rem;
+}
+
+.subscribeSection form {
+  width: min(500px, 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.subscribeSection input {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+.subscribeSection button {
+  align-self: center;
+  padding: 12px 35px;
+  background: transparent;
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+footer {
+  min-height: 120px;
+  width: 100%;
+  padding: 30px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 20px;
+}
+
+.socialLinks a {
+  color: black;
+  font-size: 1.2rem;
+}
+
+.footerLinks {
+  display: flex;
+  gap: 30px;
+}
+
+.footerLinks a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .menuBtn{
+    display: block;
+  }
+
+  nav {
+    gap: 1.5rem;
+  }
+
+  .anchor {
+    display: none;
+  }
+
+  .cardContainer {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    padding: 1.2rem;
+  }
+
+  .center h1 {
+    letter-spacing: 2px;
+  }
+
+  .cardSection {
+    padding: 4rem 1rem;
+  }
+
+  .imgHolder {
+    height: 200px;
+  }
+}
