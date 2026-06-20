@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+        <div class="upperArea">
+            <div class="inputArea">
+                <input class="inputField" type="text" placeholder="Enter Your task">
+                <select>
+                    <option value="work">Work</option>
+                    <option value="study">Study</option>
+                    <option value="college">College</option>
+                    <option value="others">Others</option>
+                </select>
+                <button class="addBtn">ADD</button>
+            </div>
+
+            <div class="serachArea">
+                <input class="filter" type="text" placeholder="Find out">
+            </div>
+        </div>
+
+        <div class="lowerArea">
+            <h1>Task Area</h1>
+            <div class="taskArea">
+                <ul></ul>
+            </div>
+        </div>
+    </div>
+
+    <section class="eventDemo">
+        <h1>Event Propagation Demo</h1>
+        <p>Learn how events track through elements via capturing and bubbling.</p>
+        <a class="info-link"
+            href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling"
+            target="_blank" rel="noopener noreferrer">More Info on Bubbling & Elements</a>
+
+        <div id="grandparent">
+            Grandparent
+            <div id="parent">
+                Parent
+                <button id="child">Click Me</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="pipeline">
+        <h1>Browser Rendering Pipeline</h1>
+        <div class="box">HTML</div>
+        <div class="arrow">↓</div>
+        <div class="box">Parsing</div>
+        <div class="arrow">↓</div>
+        <div class="box">DOM Tree</div>
+        <div class="plus">+</div>
+        <div class="box">CSSOM Tree</div>
+        <div class="arrow">↓</div>
+        <div class="box">Render Tree</div>
+        <div class="arrow">↓</div>
+        <div class="box">Layout</div>
+        <div class="arrow">↓</div>
+        <div class="box">Paint</div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

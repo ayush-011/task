@@ -1,0 +1,242 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  background-color: black;
+  font-family: sans-serif; 
+}
+
+.app-container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  padding: 40px 0;    
+  gap: 20px;
+  flex-direction: column;
+}
+
+.upperArea {
+  width: 80%; 
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  border: 2px solid white;
+  border-radius: 20px; 
+}
+
+.inputArea {
+  width: 100%; 
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  padding: 20px;
+  border: 2px solid grey;
+  gap: 15px; 
+}
+
+.inputArea input {
+  padding: 10px 15px;
+  border-radius: 10px;
+  width: 45%;
+  font-size: 20px;
+  border: 1px solid white;
+}
+
+.inputArea button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: opacity 0.2s; 
+}
+
+.inputArea button:hover {
+  opacity: 0.8;
+}
+
+.inputArea select {
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.serachArea {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.serachArea input {
+  padding: 10px 15px;
+  border-radius: 10px;
+  width: 100%; 
+  font-size: 20px;
+  border: 1px solid white;
+}
+
+.lowerArea {
+  width: 80%; 
+  height: auto;
+  border: 2px solid grey;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 20px; 
+}
+
+.taskArea {
+  border: 2px solid white;
+  width: 100%;
+  border-radius: 20px;
+  padding: 20px;
+  list-style-type: none; 
+}
+
+.lowerArea h1 {
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.taskArea li {
+  background-color: white;
+  color: black;
+  padding: 15px;
+  border-radius: 15px;
+  margin-bottom: 15px; 
+  display: flex;
+  align-items: center;
+  gap: 15px; 
+}
+
+.taskTextSpan {
+  font-size: 20px;
+  word-break: break-word;
+  flex: 1;
+}
+
+.taskArea li .newEditedText {
+  flex-grow: 1; 
+  margin-right: 15px;
+}
+
+.editBtn {
+  margin-left: auto; 
+}
+
+.editBtn, .deleteBtn {
+  padding: 10px 15px;
+  border-radius: 20px;
+  background-color: black;
+  color: white;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.editBtn:hover, .deleteBtn:hover {
+  background-color: #333; 
+}
+
+.newEditedText {
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 18px;
+  border: 1px solid grey;
+}
+
+.taskCategory {
+  padding: 4px 12px; 
+  background-color: darkslategrey;
+  color: white;
+  border-radius: 10px;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+.info-link {
+  display: inline-block;
+  margin-top: 15px;
+  color: #3498db;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.info-link:hover {
+  text-decoration: underline;
+}
+
+.eventDemo {
+  padding: 60px 20px;
+  text-align: center;
+  color: white;
+  border-top: 1px solid #222;
+}
+
+#grandparent {
+  background: red;
+  padding: 50px;
+  margin: 20px auto 0 auto;
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+#parent {
+  background: green;
+  padding: 50px;
+  border-radius: 10px;
+}
+
+#child {
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.pipeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 60px 20px;
+  color: white;
+  border-top: 1px solid #222;
+}
+
+.box {
+  padding: 20px;
+  width: 220px;
+  text-align: center;
+  background: white;
+  color: black;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.arrow {
+  font-size: 30px;
+}
+
+.plus {
+  font-size: 30px;
+}
