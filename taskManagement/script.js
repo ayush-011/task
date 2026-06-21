@@ -4,59 +4,88 @@ const add = document.querySelector(".addBtn");
 const selected = document.querySelector("select");
 const filterInput = document.querySelector(".filter");
 
-add.addEventListener("click", () => {
-  const inputValue = input.value;
-  if (inputValue.trim() === "") return;
+let tasksArray = JSON.parse(localStorage.getItem("tasks")) || [];
 
-  const list = document.createElement("li");
+function saveToLocalStorage() {
+  localStorage.setItem("tasks", JSON.stringify(tasksArray));
+}
 
-  const taskText = document.createElement("span");
-  taskText.textContent = inputValue;
-  taskText.classList.add("taskTextSpan");
-  taskText.style.fontSize = "20px";
-  list.appendChild(taskText);
-  
-  const categoryValue = selected.value;
-  const categorySpan = document.createElement("span");
-  categorySpan.textContent = ` (${categoryValue})`;
-  categorySpan.classList.add("taskCategory");
-  list.appendChild(categorySpan);
+function renderTasks() {
+  taskField.innerHTML = "";
 
-  const editBtn = document.createElement("button");
-  editBtn.textContent = "Edit";
-  editBtn.classList.add("editBtn");
-  list.appendChild(editBtn);
+  tasksArray.forEach((taskObj) => {
+    const list = document.createElement("li");
+    list.dataset.id = taskObj.id; 
 
-  const deleteBtn = document.createElement("button");
-  deleteBtn.textContent = "Delete";
-  deleteBtn.classList.add("deleteBtn");
-  list.appendChild(deleteBtn);
+    const taskText = document.createElement("span");
+    taskText.textContent = taskObj.text;
+    taskText.classList.add("taskTextSpan");
+    list.appendChild(taskText);
+    
+    const categorySpan = document.createElement("span");
+    categorySpan.textContent = taskObj.category;
+    categorySpan.classList.add("taskCategory");
+    list.appendChild(categorySpan);
 
-  deleteBtn.addEventListener("click", () => {
-    list.remove();
-  });
+    const editBtn = document.createElement("button");
+    editBtn.textContent = "Edit";
+    editBtn.classList.add("editBtn");
+    list.appendChild(editBtn);
 
-  editBtn.addEventListener("click", () => {
-    if (editBtn.textContent === "Edit") {
-      const newInput = document.createElement("input");
-      newInput.type = "text";
-      newInput.value = taskText.textContent;
-      newInput.classList.add("newEditedText");
-      list.replaceChild(newInput, taskText);
-      editBtn.textContent = "Save";
-    } else {
-      const newInputSelect = list.querySelector(".newEditedText");
-      const finalValue = newInputSelect.value.trim();
-      if (finalValue !== "") {
-        taskText.textContent = finalValue;
-        list.replaceChild(taskText, newInputSelect);
-        editBtn.textContent = "Edit";
-        runFilteringLogic();
+    const deleteBtn = document.createElement("button");
+    deleteBtn.textContent = "Delete";
+    deleteBtn.classList.add("deleteBtn");
+    list.appendChild(deleteBtn);
+
+    deleteBtn.addEventListener("click", () => {
+      tasksArray = tasksArray.filter(t => t.id !== taskObj.id);
+      saveToLocalStorage();
+      renderTasks();
+      runFilteringLogic();
+    });
+
+    editBtn.addEventListener("click", () => {
+      if (editBtn.textContent === "Edit") {
+        const newInput = document.createElement("input");
+        newInput.type = "text";
+        newInput.value = taskText.textContent;
+        newInput.classList.add("newEditedText");
+        list.replaceChild(newInput, taskText);
+        editBtn.textContent = "Save";
+      } else {
+        const newInputSelect = list.querySelector(".newEditedText");
+        const finalValue = newInputSelect.value.trim();
+        if (finalValue !== "") {
+          const taskToUpdate = tasksArray.find(t => t.id === taskObj.id);
+          if (taskToUpdate) {
+            taskToUpdate.text = finalValue;
+          }
+          saveToLocalStorage();
+          renderTasks();
+          runFilteringLogic();
+        }
       }
-    }
-  });
+    });
 
-  taskField.appendChild(list);
+    taskField.appendChild(list);
+  });
+}
+
+add.addEventListener("click", () => {
+  const inputValue = input.value.trim();
+  if (inputValue === "") return;
+
+  const newTask = {
+    id: Date.now(), 
+    text: inputValue,
+    category: selected.value
+  };
+
+  tasksArray.push(newTask);
+  saveToLocalStorage();
+  renderTasks();
+  runFilteringLogic();
+
   input.value = "";
 });
 
@@ -69,7 +98,7 @@ function runFilteringLogic() {
     if (taskValue) {
       const taskValueText = taskValue.textContent.toLowerCase();
       if (taskValueText.includes(filterText)) {
-        element.style.display = "block";
+        element.style.display = "flex";
       } else {
         element.style.display = "none";
       }
@@ -78,3 +107,6 @@ function runFilteringLogic() {
 }
 
 filterInput.addEventListener("input", runFilteringLogic);
+
+renderTasks();
+1
