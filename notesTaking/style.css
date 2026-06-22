@@ -76,3 +76,14 @@ html, body{
     border-radius: 15px;
     margin: 15px;
 }
+
+.addOverlay{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    background-color: beige;
+}
+
+
