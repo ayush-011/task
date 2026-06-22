@@ -11,6 +11,10 @@ html, body{
 }
 
 .navBar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
     width: 100%;
     background-color: darkslategrey;
     padding: 10px;
