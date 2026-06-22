@@ -80,40 +80,44 @@ body {
   border-radius: 15px;
   margin: 15px;
 }
-
 .addOverlay {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-  width: 40%;
-  padding: 25px;
-  background-color: Beige;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 40%;
+    padding: 25px;
+    background-color: Beige;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
 }
 
-.addTitleArea,
-.addTaskArea {
-  width: 100%;
+.addTitleArea, .addTaskArea {
+    width: 100%;
 }
 
-.addOverlay input {
-  width: 100%;
-  padding: 12px;
-  font-size: 16px;
-  border: 1px solid Silver;
-  border-radius: 8px;
-  outline: none;
-  background-color: White;
+.addOverlay input, .addOverlay textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid Silver;
+    border-radius: 8px;
+    outline: none;
+    background-color: White;
+    font-family: inherit;
 }
 
-.addOverlay input:focus {
-  border-color: SteelBlue;
+.addOverlay textarea {
+    height: 120px;
+    resize: vertical; 
+}
+
+.addOverlay input:focus, .addOverlay textarea:focus {
+    border-color: SteelBlue;
 }
