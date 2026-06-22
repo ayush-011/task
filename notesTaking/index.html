@@ -5,35 +5,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notes</title>
+    <link
+  href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+  rel="stylesheet"
+/>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <main>
-        <div class="navBar">
-            <div class="logo">
-                <h1>📙 Notes</h1>
-            </div>
-            <div class="serach">
-                <input class="serach" type="text" placeholder="Serach..">
-            </div>
-        </div>
+   <div class="container">
+    <header class="header">
+        <h1>Elegant Notes</h1>
+        <p>Enter your thoughts and ideas</p>
+    </header>
 
-        <div class="addOverlay">
-            <div class="addTitleArea">
-                <input type="text" placeholder="inputTitle">
-            </div>
-            <div class="addTaskArea">
-                <textarea type="text" placeholder="Type..."></textarea>
-            </div>
-        </div>
+    <div class="controls">
+        <div class="controlsContainer">
+            <input type="text" id="searchInput" placeholder="Search..." class="serachInput"/>
 
-        <div class="sideNav">
-            <h1>Add</h1>
-            <h1>Active</h1>
-            <h1>Completed</h1>
+            <div class="filterGroup">
+                <select id="filterSelect">
+                    <option class="all">All Notes</option>
+                    <option class="work">Work</option>
+                    <option class="personal">Personality</option>
+                    <option class="ideas">Ideas</option>
+                    <option class="reminders">Reminders</option>
+                </select>
+                <button id="addNoteBtn" class="addBtn">
+                    
+                </button>
+            </div>
         </div>
-    </main>
+    </div>
+
+   </div>
     <script src="script.js"></script>
 </body>
 
